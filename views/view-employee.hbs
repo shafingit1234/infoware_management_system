@@ -1,0 +1,51 @@
+<nav aria-label="breadcrumb">
+    <ol class="breadcrumb">
+        <li class="breadcrumb-item"><a href="/">Home</a></li>
+        <li class="breadcrumb-item active" aria-current="page">View User</li>
+    </ol>
+</nav>
+
+<div class="view-user p-5">
+    {{#each rows}}
+    <div class="row mb-5">
+        <div class="col text-center">
+            <h3>{{this.full_name}}</h3>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col">
+            <table class="table">
+                <thead>
+                    <tr>
+                        <th scope="col">Full Name</th>
+                        <th scope="col">Job Title</th>
+                        <th scope="col">Phone Number</th>
+                        <th scope="col">Email Id</th>
+                        <th scope="col">Primary Contact</th>
+                        <th scope="col">Primary Phone Number</th>
+                        <th scope="col">Primary Relation</th>
+                        <th scope="col">Secondary Contact</th>
+                        <th scope="col">Secondary Phone Number</th>
+                        <th scope="col">Secondary Relation</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <th scope="row">{{this.full_name}}</th>
+                        <td>{{this.job_title}}</td>
+                        <td>{{this.phone_number}}</td>
+                        <td>{{this.email}}</td>
+                        <td>{{this.primary_contact}}</td>
+                        <td>{{this.primary_number}}</td>
+                        <td>{{this.primary_relation}}</td>
+                        <td>{{this.secondary_contact}}</td>
+                        <td>{{this.secondary_number}}</td>
+                        <td>{{this.secondary_relation}}</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+        
+    </div>
+    {{/each}}
+</div>
